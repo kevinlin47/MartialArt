@@ -4,9 +4,12 @@ public class Belt {
 
     private String beltName;
     private int value;
-    public Belt (String beltName, int value) {
+
+    private Grade grade;
+    public Belt (String beltName, int value, Grade grade) {
         this.beltName = beltName;
         this.value = value;
+        this.grade = grade;
     }
 
     public String getBeltName() {
@@ -15,5 +18,9 @@ public class Belt {
 
     public int getValue() {
         return this.value;
+    }
+
+    public Grade getGrade() {
+        return this.grade;
     }
 }

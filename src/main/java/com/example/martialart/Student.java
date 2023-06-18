@@ -6,7 +6,7 @@ import java.util.Random;
 public class Student {
     private String firsName;
     private String lastName;
-    private int studentId;
+    private final int studentId;
     private Address address;
     private Date birthDate;
     private Belt belt;
@@ -43,5 +43,49 @@ public class Student {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public int getStudentId() {
+        return this.studentId;
+    }
+
+    public Address getAddress() {
+        return  this.address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public Belt getBelt() {
+        return this.belt;
+    }
+
+    public void setBelt(Belt belt) {
+        this.belt = belt;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }
