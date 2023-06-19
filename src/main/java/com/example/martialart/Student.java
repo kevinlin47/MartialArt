@@ -1,5 +1,6 @@
 package com.example.martialart;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 
@@ -13,6 +14,8 @@ public class Student {
     private String email;
     private String phoneNumber;
 
+    private ArrayList<Student> siblings;
+
     public Student(String firsName, String lastName, int studentId, Address address, Date birthDate, Belt belt, String email, String phoneNumber) {
         this.firsName = firsName;
         this.lastName = lastName;
@@ -21,6 +24,7 @@ public class Student {
         this.belt = belt;
         this.email = email;
         this. phoneNumber = phoneNumber;
+        this.siblings = new ArrayList<Student>();
 
         //Randomly generate a value
         //Will add validity check later
@@ -87,5 +91,13 @@ public class Student {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public void addSibling(Student sibling) {
+        this.siblings.add(sibling);
+    }
+
+    public ArrayList<Student> getSiblings() {
+        return this.siblings;
     }
 }

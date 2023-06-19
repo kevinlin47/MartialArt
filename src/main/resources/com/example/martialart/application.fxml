@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.martialart.MartialArtController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="982.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1">
+  <tabs>
+    <Tab text="Student">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ScrollPane layoutY="88.0" prefHeight="434.0" prefWidth="239.0">
+                     <content>
+                        <TableView prefHeight="420.0" prefWidth="252.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Student ID" />
+                            <TableColumn prefWidth="75.0" text="Last Name" />
+                              <TableColumn prefWidth="75.0" text="First Name" />
+                          </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+                <AnchorPane layoutX="475.0" layoutY="158.0" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                  <TextArea editable="false" layoutX="-1.0" prefHeight="59.0" prefWidth="252.0" text="Find by ID&#10;Find by first name&#10;Find by last name" />
+                  <TextField layoutY="59.0" prefHeight="32.0" prefWidth="192.0" />
+                  <Button layoutX="192.0" layoutY="60.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="59.0" text="Find" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Belt Test">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
